@@ -6,6 +6,7 @@
   --primary: #1d63e7;
   --primary-soft: #dce8ff;
   --border: #d8e1ef;
+  --card-shadow: 0 12px 26px rgba(16, 35, 63, 0.16);
 }
 
 body.dark {
@@ -16,6 +17,7 @@ body.dark {
   --primary: #70a3ff;
   --primary-soft: #1b2f56;
   --border: #25354f;
+  --card-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; }
@@ -180,7 +182,7 @@ h2 {
 .hover-card:hover,
 .hover-card:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(16, 35, 63, 0.16);
+  box-shadow: var(--card-shadow);
 }
 
 .chip-grid {
