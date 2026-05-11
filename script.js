@@ -2,6 +2,7 @@ const themeToggle = document.getElementById('themeToggle');
 const storedTheme = localStorage.getItem('theme');
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
+const SKILL_ANIMATION_THRESHOLD = 0.35;
 
 if (themeToggle && storedTheme === 'dark') {
   document.body.classList.add('dark');
@@ -42,7 +43,7 @@ if (skillFills.length) {
         obs.unobserve(bar);
       }
     });
-  }, { threshold: 0.35 });
+  }, { threshold: SKILL_ANIMATION_THRESHOLD });
 
   skillFills.forEach((bar) => observer.observe(bar));
 }
