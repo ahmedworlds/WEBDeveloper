@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmed Elsheikh - Prospective PhD Researcher in Applied AI, Software Systems, and Digital Transformation" />
+  <title>Ahmed Elsheikh | Research Profile</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-2: #eef3fa;
+      --text: #1b2a3a;
+      --muted: #5a6a7a;
+      --primary: #1f5fa8;
+      --primary-2: #2a74c9;
+      --accent: #4f8dd8;
+      --border: #d8e2ef;
+      --shadow: 0 8px 30px rgba(20, 40, 70, 0.08);
+      --radius: 14px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f1722;
+      --surface: #172232;
+      --surface-2: #1d2c40;
+      --text: #e7eff9;
+      --muted: #9fb2c8;
+      --primary: #76aef2;
+      --primary-2: #9bc4fa;
+      --accent: #62a0e8;
+      --border: #2c3f56;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--surface-2) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--surface) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .nav-links a,
+    .toggle-btn {
+      border: 1px solid transparent;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 0.9rem;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .toggle-btn:hover,
+    .toggle-btn:focus-visible {
+      background: var(--surface-2);
+      border-color: var(--border);
+      text-decoration: none;
+    }
+
+    .toggle-btn {
+      background: var(--surface);
+      cursor: pointer;
+    }
+
+    header.hero {
+      padding: 3.5rem 0 2rem;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 4px);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.3vw, 1.2rem);
+      font-weight: 500;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .icon-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.45rem 0.8rem;
+      font-weight: 600;
+    }
+
+    main {
+      padding-bottom: 2.5rem;
+    }
+
+    section {
+      margin: 1rem 0 1.2rem;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    }
+
+    h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0.45rem 0;
+    }
+
+    .chip-list,
+    .item-list {
+      margin: 0.7rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .chip-list li,
+    .item-list li {
+      margin: 0.25rem 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 0.9rem;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 26px rgba(20, 40, 70, 0.16);
+    }
+
+    .card small {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    details {
+      margin-top: 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.65rem 0.8rem;
+      background: var(--surface-2);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .skill-grid {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 0.6rem;
+    }
+
+    .skill {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem;
+    }
+
+    .skill-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .bar {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: color-mix(in srgb, var(--primary) 18%, var(--surface));
+      border: 1px solid var(--border);
+    }
+
+    .bar > span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+      transition: width 1s ease;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      padding: 0.6rem 0.95rem;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      border-color: var(--primary);
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+      color: #fff;
+    }
+
+    footer {
+      padding: 1.2rem 0 2rem;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (min-width: 700px) {
+      .card.span-6 {
+        grid-column: span 6;
+      }
+
+      .section-card {
+        padding: 1.4rem;
+      }
+
+      details {
+        padding: 0.85rem 1rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-links {
+        gap: 0.2rem;
+      }
+
+      .nav-links a,
+      .toggle-btn {
+        padding: 0.4rem 0.55rem;
+        font-size: 0.82rem;
+      }
+
+      .hero-card {
+        padding: 1.3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .card,
+      .bar > span,
+      .nav-links a,
+      .toggle-btn {
+        transition-duration: 0.01ms;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <div class="brand">Ahmed Elsheikh</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research-interests">Research Interests</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#volunteering">Volunteering</a>
+        <a href="#languages">Languages</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle-btn" id="themeToggle" type="button" aria-label="Toggle light and dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="about">
+    <div class="container">
+      <article class="hero-card">
+        <h1>Ahmed Elsheikh</h1>
+        <p class="subtitle">Prospective PhD Researcher - Applied AI | Software Systems | Digital Transformation</p>
+        <ul class="contact-list" aria-label="Contact details">
+          <li><a href="mailto:BlueprintCoreDev@gmail.com">BlueprintCoreDev@gmail.com</a></li>
+          <li><a href="tel:+447351177357">+44 735 1177 357</a></li>
+          <li>London, UK - Full EU Mobility</li>
+        </ul>
+        <div class="icon-links" aria-label="Social links">
+          <span class="icon-link">
+            <span aria-hidden="true">⌘</span> GitHub
+          </span>
+          <span class="icon-link">
+            <span aria-hidden="true">in</span> LinkedIn
+          </span>
+          <a class="icon-link" href="#contact" aria-label="Jump to contact">
+            <span aria-hidden="true">✉</span> Contact
+          </a>
+        </div>
+      </article>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="research-interests" aria-labelledby="research-interests-heading">
+      <article class="section-card">
+        <h2 id="research-interests-heading">Research Interests</h2>
+        <ul class="chip-list">
+          <li>Applied Artificial Intelligence</li>
+          <li>Software Engineering &amp; Education</li>
+          <li>Resilient &amp; Self-Healing Systems</li>
+          <li>Data-Intensive Systems</li>
+          <li>Applied Cybersecurity</li>
+          <li>Post-Quantum Security</li>
+          <li>AI for Resilient Systems</li>
+          <li>Digital Transformation</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <article class="section-card">
+        <h2 id="education-heading">Education &amp; Quantitative Training</h2>
+
+        <details open>
+          <summary>MSc Software Development (Distinction) - Coventry University, UK</summary>
+          <p><strong>Key Modules:</strong> Software Architecture • Advanced Development &amp; Frameworks • Modern Web Technologies • Secure Design • Big Data Intensive Systems • Mobile Platforms &amp; Applications</p>
+          <div class="card" style="margin-top: 0.8rem;">
+            <h3>MSc Project - Gen-AI Self-Healing Web Application</h3>
+            <ul class="item-list">
+              <li>Designed an AI-driven system for real-time fault detection and automatic recovery</li>
+              <li>Integrated Generative AI, logging, and system monitoring</li>
+              <li><strong>Tech:</strong> Node.js, Express, Gemini AI, Local LLMs, APIs</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Master of Business Administration MBA (Merit) - German University in Cairo, Egypt</summary>
+          <p><strong>Key Modules:</strong> Research Methodology • Information Management • IS Project Management • Business Intelligence • International Business • Marketing Strategy • Supply Chain Management</p>
+          <p><strong>Thesis:</strong> Acceptance Factors of Wearable IoT Devices in Healthcare</p>
+        </details>
+
+        <details>
+          <summary>Postgraduate Diploma, Medical Bioinformatics (Distinction) - Helwan University, Egypt</summary>
+          <p><strong>Key modules:</strong> Bio &amp; Applied Statistics • Systems Analysis &amp; Design • Medical Decision Support Systems • Databases • Medical &amp; Bioinformatics • Modelling &amp; Simulation • Biomedical Internet Applications • Research Project</p>
+        </details>
+
+        <details>
+          <summary>MSc Pre-Master Courses, Medical Bioinformatics (Pre-Master) - Helwan University, Egypt</summary>
+          <p><strong>Key modules:</strong> Research Methods • Information Security • Medical Informatics • Electronic Health Records • Data Warehousing • Bioinformatics • Bio &amp; Applied Statistics • Health Information Systems</p>
+        </details>
+
+        <details>
+          <summary>BCom Finance (Honours) - Ain Shams University, Egypt</summary>
+          <p><strong>Key modules:</strong> Business Management • Accounting • Taxation • Law • Information Systems</p>
+        </details>
+      </article>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <article class="section-card">
+        <h2 id="experience-heading">Professional &amp; Research Experience</h2>
+
+        <details open>
+          <summary>Head of Software Development / Systems Architect - German University in Cairo and Berlin (15+ Years)</summary>
+          <ul class="item-list">
+            <li>Designed and implemented large-scale enterprise and university systems</li>
+            <li>Built integrated platforms covering: HR, Payroll, Finance, Inventory, Maintenance; Warehouse &amp; Logistics; Transport &amp; Bus Reservation Systems; Student Records, Grades, Registration &amp; Reporting</li>
+            <li>Led full SDLC: requirements, architecture, development, deployment, maintenance</li>
+            <li>Delivered secure, scalable, data-driven systems used by thousands of users</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Academic &amp; Teaching Engagement</summary>
+          <ul class="item-list">
+            <li>Student Mentor (Vygo) - Online academic and technical mentoring</li>
+            <li>Course Representative - Coventry University</li>
+            <li>Delivered software and programming courses to students and professionals</li>
+            <li>Supported peer learning, feedback loops, and curriculum communication</li>
+          </ul>
+        </details>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <article class="section-card">
+        <h2 id="skills-heading">Technical Skills</h2>
+        <div class="skill-grid">
+          <div class="skill">
+            <div class="skill-head"><span>Programming &amp; Systems</span><span>92%</span></div>
+            <div class="bar"><span data-level="92"></span></div>
+            <p>JavaScript - Node.js - Express - Web APIs • Database Systems - Data Pipelines - System Integration</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head"><span>AI &amp; Data</span><span>90%</span></div>
+            <div class="bar"><span data-level="90"></span></div>
+            <p>Applied AI - Generative AI - LLM Integration • Data-Intensive Systems - Logging &amp; Monitoring • AI for Fault Detection &amp; System Resilience</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head"><span>Security &amp; Architecture</span><span>89%</span></div>
+            <div class="bar"><span data-level="89"></span></div>
+            <p>Secure Software Design • System Architecture - Modular &amp; Scalable Systems</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head"><span>Cloud &amp; Dev</span><span>84%</span></div>
+            <div class="bar"><span data-level="84"></span></div>
+            <p>Cloud-based deployments • Version control - CI/CD concepts</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <article class="section-card">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="cards">
+          <article class="card span-6" tabindex="0">
+            <small>Applied AI Systems</small>
+            <h3>Gen-AI Self-Healing Web Application</h3>
+            <p>AI-driven architecture for real-time fault detection, automatic recovery, and monitored reliability.</p>
+          </article>
+          <article class="card span-6" tabindex="0">
+            <small>Enterprise Software Platforms</small>
+            <h3>Integrated Institutional Systems</h3>
+            <p>Platforms for university and enterprise operations: HR, Finance, Logistics, and student information ecosystems.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <small>Digital Transformation</small>
+            <h3>Secure, Scalable Data-Driven Solutions</h3>
+            <p>Long-term architecture leadership delivering robust systems for thousands of users across academic and operational domains.</p>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <section id="research" aria-labelledby="research-heading">
+      <article class="section-card">
+        <h2 id="research-heading">Research</h2>
+        <ul class="item-list">
+          <li>Research design - Literature review - Academic writing</li>
+          <li>Quantitative &amp; qualitative analysis</li>
+          <li>Thesis: Acceptance Factors of Wearable IoT Devices in Healthcare</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="volunteering" aria-labelledby="volunteering-heading">
+      <article class="section-card">
+        <h2 id="volunteering-heading">Service &amp; Volunteering</h2>
+        <div class="cards">
+          <article class="card span-6" tabindex="0">
+            <h3>FoodCycle</h3>
+            <p>Kitchen &amp; Community Support</p>
+          </article>
+          <article class="card span-6" tabindex="0">
+            <h3>Resala Charity (Egypt)</h3>
+            <p>Community projects, infrastructure support</p>
+          </article>
+          <article class="card" tabindex="0">
+            <h3>LHA London Hotels</h3>
+            <p>Operational support (UK experience)</p>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <section id="languages" aria-labelledby="languages-heading">
+      <article class="section-card">
+        <h2 id="languages-heading">Languages</h2>
+        <ul class="item-list">
+          <li>English (Fluent)</li>
+          <li>Arabic (Native)</li>
+          <li>German (Beginner)</li>
+          <li>Willing to reach B1/B2 in local EU language</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <article class="section-card">
+        <h2 id="contact-heading">Contact</h2>
+        <p>For collaborations, research opportunities, and PhD discussions, feel free to get in touch.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:BlueprintCoreDev@gmail.com">Email Ahmed</a>
+          <a class="btn" href="tel:+447351177357">Call +44 735 1177 357</a>
+          <a class="btn" href="#about">Back to Top</a>
+          <a class="btn" href="mailto:BlueprintCoreDev@gmail.com?subject=CV%20Request%20-%20Ahmed%20Elsheikh" aria-label="Request downloadable CV">Request Downloadable CV</a>
+        </div>
+        <p><strong>References:</strong> Available upon request</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Ahmed Elsheikh — Prospective PhD Researcher Profile
+  </footer>
+
+  <script>
+    (function () {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const savedTheme = localStorage.getItem("theme");
+      const year = document.getElementById("year");
+      const bars = document.querySelectorAll(".bar > span[data-level]");
+      const anchors = document.querySelectorAll('.nav-links a[href^="#"], a.btn[href^="#"]');
+
+      year.textContent = new Date().getFullYear();
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          root.setAttribute("data-theme", "dark");
+          themeToggle.textContent = "☀";
+        } else {
+          root.removeAttribute("data-theme");
+          themeToggle.textContent = "🌙";
+        }
+      }
+
+      applyTheme(savedTheme || "light");
+
+      themeToggle.addEventListener("click", function () {
+        const isDark = root.getAttribute("data-theme") === "dark";
+        const nextTheme = isDark ? "light" : "dark";
+        localStorage.setItem("theme", nextTheme);
+        applyTheme(nextTheme);
+      });
+
+      anchors.forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (!targetId.startsWith("#")) return;
+          const target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+        });
+      });
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          function (entries, obs) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                const bar = entry.target;
+                const level = bar.getAttribute("data-level") || "0";
+                bar.style.width = level + "%";
+                obs.unobserve(bar);
+              }
+            });
+          },
+          { threshold: 0.35 }
+        );
+
+        bars.forEach(function (bar) {
+          observer.observe(bar);
+        });
+      } else {
+        bars.forEach(function (bar) {
+          bar.style.width = (bar.getAttribute("data-level") || "0") + "%";
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
