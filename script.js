@@ -2,6 +2,7 @@ const themeToggle = document.getElementById('themeToggle');
 const storedTheme = localStorage.getItem('theme');
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
+// Trigger skill animation after the bars are meaningfully visible in the viewport.
 const SKILL_ANIMATION_THRESHOLD = 0.35;
 
 if (themeToggle && storedTheme === 'dark') {

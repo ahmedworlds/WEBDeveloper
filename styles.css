@@ -48,7 +48,6 @@ a { color: inherit; }
   padding: 0.85rem 0;
   backdrop-filter: blur(10px);
   background: var(--bg);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
 }
 
 .brand {
